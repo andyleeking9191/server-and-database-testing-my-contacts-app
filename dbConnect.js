@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -8,26 +9,25 @@ const knex = require('knex')({
   client: 'pg',
   version: '12.9',
   connection: {
-    host : 'localhost',
-    port : 5432,
-    user : 'postgres',
-    password : 'postgres',
-    database : 'employees'
+    host : `${process.env.HOST}`,
+    port : `${process.env.PORT}`,
+    user : `${process.env.DATABASE_USER}`,
+    password : `${process.env.DATABASE_PASSWORD}`,
+    database : `${process.env.DATABASE}`
   }
 });
 
-let customers = [];
+let profiles = [];
  
 knex.select('*')
-.from('employees')
-.where({emp_no: '10001'})
-.then((customersData) => {
-  customers = customersData
+.from('profile')
+.then((profilesData) => {
+  profiles = profilesData
 })
 
 
 app.get('/users', (req, res) => {
-  res.send(customers)
+  res.send(profiles)
 } )
 
 
