@@ -1,0 +1,44 @@
+.detailed-profile {
+    position: relative;
+    width: 100%;
+    background-color: rgba(66,65,77,1);
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: rgba(249, 249, 250, 1);
+    text-align: left;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.detailed-profile__top-info-container {
+    text-align: left;
+    margin-bottom: 1rem;
+    height: 150px;
+}
+
+
+.detailed-profile__image{
+    float: left;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
+    width: 150px;
+    margin-right: 2.5rem;
+  }
+
+  .detailed-profile__top-info-container > p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .detailed-profile__name {
+    font-size: 2rem;
+  }
+
+  .detailed-profile__btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+

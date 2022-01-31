@@ -1,0 +1,31 @@
+.profile-card {
+    font-size: 1.25rem;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(66,65,77,1);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
+    color: rgba(249, 249, 250, 1);
+    padding: 1.25rem;
+  }
+
+  .profile__image {
+    width: 100px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
+    margin: 0, auto, 1rem, auto;
+  }
+
+  .profile__text--copy {
+    cursor: pointer;
+  }
+
+  .profile__text--copy:hover {
+    filter: brightness(75%);
+  }
+
+  @media only screen and (max-width: 1050px) {
+
+    .profile-card {
+      font-size: 1rem;
+    }
+  }

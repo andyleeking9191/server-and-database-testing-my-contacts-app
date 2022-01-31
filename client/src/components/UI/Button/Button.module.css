@@ -1,0 +1,30 @@
+.btn {
+  background-color: rgb(43, 42, 51);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: rgba(249, 249, 250, 1);
+  padding: 0.35rem 4rem;
+}
+
+.btn:hover {
+  filter: brightness(75%);
+  cursor: pointer;
+}
+
+.btn--close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgb(43, 42, 51);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: rgba(249, 249, 250, 1);
+  padding: 0.35rem 1rem;
+}
+
+.btn--small {
+  padding: .35rem 2rem;
+  margin: auto .5rem;
+}
