@@ -12,6 +12,7 @@ CREATE TABLE profile (
     street_num INT,
     street_name VARCHAR(255),
     city_name VARCHAR(255),
+    state_name VARCHAR(255),
     zip_code INT,
     country VARCHAR(255),
     profile_img_large VARCHAR(255) 

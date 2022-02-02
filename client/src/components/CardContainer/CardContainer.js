@@ -23,17 +23,17 @@ const CardContainer = (props) => {
       {!detailedProfile ? (
         profileList.map((profile) => (
           <ProfileCard
-            key={profile.login.uuid}
-            firstName={profile.name.first}
-            lastName={profile.name.last}
+            key={profile.profile_id}
+            firstName={profile.first_name}
+            lastName={profile.last_name}
             cell={profile.cell}
             email={profile.email}
-            addressNum={profile.location.street.number}
-            street={profile.location.street.name}
-            image={profile.picture.large}
-            city={profile.location.city}
-            state={profile.location.state}
-            postcode={profile.location.postcode}
+            addressNum={profile.street_num}
+            street={profile.street_name}
+            image={profile.profile_img_large}
+            city={profile.city_name}
+            state={profile.state_name}
+            postcode={profile.zip_code}
             openDetailedProfileHandler={openDetailedProfileHandler}
           />
         ))

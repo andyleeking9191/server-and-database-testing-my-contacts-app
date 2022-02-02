@@ -10,11 +10,12 @@ function App() {
   
 
     async function fetchProfiles() {
-        const url = 'https://randomuser.me/api/?results=21&nat=US&inc=name,picture,location,cell,email,login'
+        const url = 'http://localhost:3001/users'
         try{
             const response = await fetch(url);
             const profiles = await response.json();
-            setProfileList(profiles.results);
+            console.log(profiles)
+            setProfileList(profiles);
         } catch(error) {
             console.log(error)
         }
@@ -32,7 +33,7 @@ function App() {
   }
 
   const filteredProfiles = profileList.filter((profile) => {
-    const fullName = profile.name.first.concat(' ' + profile.name.last)
+    const fullName = profile.first_name.concat(' ' + profile.last_name)
     return  fullName.toLowerCase().includes(searchbox.toLocaleLowerCase())
   })
   
